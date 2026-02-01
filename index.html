@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="무료로 즐기는 HTML5 레벨업 테트리스 게임입니다. 설치 없이 웹에서 바로 플레이하세요. 단계별 난이도 상승과 고득점 공략을 제공합니다.">
     <title>레벨업 테트리스 - 무료 퍼즐 게임 & 공략</title>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8606694581555602" crossorigin="anonymous"></script>
+
     <style>
         /* --- 기본 설정 --- */
         body {
@@ -53,6 +56,7 @@
             font-size: 14px;
             text-align: center;
             border-radius: 8px;
+            overflow: hidden; /* 광고가 튀어나가는 것 방지 */
         }
 
         /* --- 게임 영역 디자인 --- */
@@ -282,7 +286,7 @@
 
     <div class="ad-side right">
         <div class="ad-banner">
-            광고 영역 (우)<br>
+             광고 영역 (우)<br>
             160x600
         </div>
     </div>
@@ -511,7 +515,7 @@
         requestAnimationFrame(update);
     }
 
-    // --- 키보드 이벤트 수정됨 ---
+    // --- 키보드 이벤트 (스페이스바 회전 및 스크롤 방지) ---
     document.addEventListener('keydown', event => {
         if (event.keyCode === 37) { // 왼쪽
             playerMove(-1);
